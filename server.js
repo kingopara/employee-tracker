@@ -27,6 +27,10 @@ const db = mysql.createConnection(
     console.log('connected to the company database.')
 );
 
+// query the server
+db.query(`SELECT * FROM employee`, (err, rows) => {
+    console.log(rows);
+});
 // testing server
 // app.get('/', (req, res) => {
 //     res.json({
